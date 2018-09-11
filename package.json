@@ -1,0 +1,37 @@
+{
+    "name": "simple partner service",
+    "version": "1.0.0",
+    "description": "example of a partner's service",
+    "main": "main.js",
+    "licence": "commercial",
+    "private": true,
+    "yupana": {
+        "files": [
+            "index.js",
+            "utils.js",
+            "main.js"
+        ],
+        "resourceConsumption": "singleton",
+        "state": "stateless",
+        "queue": false,
+        "disableSessionAndRole": true,
+        "frontApi": "https://devloop.loopsoftware.fr",
+        "packageName": "main.js",
+        "endpoints": [
+            {
+                "name": "YPNMainEndpoint",
+                "protocol": "tcp",
+                "port": 9099
+            }
+        ]
+    },
+    "dependencies": {},
+    "yupana-versions": {
+        "version": "2.2.1",
+        "build": "DEV",
+        "addon": {
+            "version": "2.2.1",
+            "build": "DEV"
+        }
+    }
+}
