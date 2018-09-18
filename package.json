@@ -15,7 +15,6 @@
         "state": "stateless",
         "queue": false,
         "disableSessionAndRole": true,
-        "frontApi": "https://devloop.loopsoftware.fr",
         "packageName": "main.js",
         "endpoints": [
             {
