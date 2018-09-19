@@ -1,4 +1,4 @@
-const yQuery = require('./framework/server/lib/YQuery.js').YQuery;
+const yQuery = require('./framework/server/lib/core/YQuery.js').YQuery;
 const utils = require('./utils.js');
 
 Object.assign(exports, require("./index.js"));
