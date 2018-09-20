@@ -6,12 +6,12 @@ The example works in assemble with [Sample-invoicing app](https://github.com/loo
 
  1. pull latest docker image 
     ```bash 
-    docker pull yupana/yupana-partner:latest
+    docker pull yupana/partner:latest
     ```
  1. get latest package.json
     ```bash
     mv package.json mypackage.json
-    docker run --name partner-base yupana/yupana-partner:latest
+    docker run --name partner-base yupana/partner:latest
     docker cp partner-base:/app/yupana/service/package.json ./package.json
     docker rm -v partner-base
     ```
