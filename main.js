@@ -124,3 +124,54 @@ exports.webView = async function (
         }, {})
     };
 };
+
+// overwrite default config to match OpenIDConnect authentication
+exports.config = async function (serv, serviceRole, serviceSession, config) {
+    return config ? true : {
+        "className": "baseService",
+        "id": "{YPN_45f00168-04d3-4a5a-b9cf-052a05c5f368}",
+        "module": "partnerService",
+        "scope": "private",
+        "slots": {
+            "subscription": {
+                "active": {
+                    "name": "active",
+                    "type": "YTboolean",
+                    "computed": true
+                },
+                "clientID": {
+                    "name": "clientID",
+                    "type": "YTstring",
+                    "computed": true
+                },
+                "clientSecret": {
+                    "name": "clientSecret",
+                    "type": "YTstring",
+                    "computed": true
+                },
+                "callbackURL": {
+                    "name": "callbackURL",
+                    "type": "YTstring",
+                    "computed": true
+                },
+                "metadataURL": {
+                    "name": "metadataURL",
+                    "type": "YTstring",
+                    "computed": true
+                },
+                "scope": {
+                    "name": "scope",
+                    "type": "YTstring",
+                    "computed": true
+                },
+                "authorizationURLparams": {
+                    "connection": {               //custom OpenIDConnect extension specific to auth0.com provider
+                        "name": "connection",
+                        "type": "YTstring",
+                        "computed": true
+                    }
+                }
+            }
+        }
+    };
+};
