@@ -126,8 +126,8 @@ exports.webView = async function (
 };
 
 // overwrite default config to match OpenIDConnect authentication
-exports.config = async function (serv, serviceRole, serviceSession, config) {
-    return config ? true : {
+exports.config = async function () {
+    return {
         "className": "baseService",
         "id": "{YPN_45f00168-04d3-4a5a-b9cf-052a05c5f368}",
         "module": "partnerService",
